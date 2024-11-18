@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StringMethods</title>
+<style>
+
+.box
+{
+padding: 10px;
+border:none;
+display: flex;
+margin: 10px;
+background-color: pink;
+border-radius: 10px;
+}
+.box::placeholder
+{
+color:white;
+}
+.btn
+{
+padding: 10px;
+width:190px;
+margin-left: 10px;
+border:none;
+border-radius: 10px;
+background: #000;
+color:white;
+display:flex;
+margin: 10px;
+}
+.btn:hover{
+background-color: pink;
+}
+</style>
+</head>
+<body>
+<div class="body">
+<button class="btn"  onclick="ok()"> Clear All</button>
+<button class="btn"  onclick="okk()">Result Clear</button>
+<input type="text" class="box box1" placeholder="Enter First String" value="">
+<input type="text" class="box box2" placeholder="Enter Second String" value="">
+<input type="text" class="box box3" placeholder="Result"  value="">
+<button class="btn"  onclick="len()">String Length</button>
+<button class="btn"  onclick="modifi1()">String 1 UpperCase</button>
+<button class="btn"  onclick="modifi2()">String 2 UpperCase</button>
+<button class="btn"  onclick="cat()">Strings Joins</button>
+
+
+</div>
+<div>
+<script>
+function len()
+{
+a=document.querySelector(".box.box1").value;
+b=document.querySelector(".box.box2").value;
+result=String(a.length+b.length);
+document.querySelector(".box.box3").value=result;
+}
+function modifi1()
+{
+ a=document.querySelector(".box.box1").value;
+ b=document.querySelector(".box.box2").value;
+ result=String(a.toUpperCase());
+ document.querySelector(".box.box3").value=result;
+}
+function modifi2()
+{
+    a=document.querySelector(".box.box1").value;
+    b=document.querySelector(".box.box2").value;
+    result=String(b.toUpperCase());
+    document.querySelector(".box.box3").value=result;
+}
+function cat()
+{
+a=document.querySelector(".box.box1").value;
+b=document.querySelector(".box.box2").value;
+result=String(a.concat(b));
+document.querySelector(".box.box3").value=result;
+}
+function ok()
+{
+document.querySelector(".box.box1").value="";
+document.querySelector(".box.box2").value="";
+document.querySelector(".box.box3").value="";
+} 
+function okk()
+{
+document.querySelector(".box.box3").value="";
+}
+</script>
+</div>
+</body>
+</html>
